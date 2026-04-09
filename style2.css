@@ -1,0 +1,69 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    color: white;
+    overflow-x: hidden;
+
+    background: linear-gradient(-45deg, #0f172a, #1e293b, #2563eb, #0ea5e9);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% }
+    50% { background-position: 100% }
+    100% { background-position: 0% }
+}
+
+.navbar {
+    background: rgba(0,0,0,0.7) !important;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Animation */
+.hidden-left {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.hidden-right {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.8s ease;
+}
+
+/* Letter Drop Animation */
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: drop 0.5s forwards;
+}
+
+@keyframes drop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
